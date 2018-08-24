@@ -1,0 +1,6 @@
+.git
+.gitignore
+composer.dev.json
+
+# Ignore jshttp/mime-db node project to generate mime types and extensions database
+mime-db
