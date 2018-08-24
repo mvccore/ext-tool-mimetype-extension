@@ -16,7 +16,7 @@ accept attribute.
 
 ## Mimetypes And Extensions Sources
 
-Database of all mimetypes and extensions is loaded by Node.JS project [`jshttp/mime-db`](https://github.com/jshttp/mime-db) from 3 sources:
+Database of all mimetypes and extensions is loaded by Node.JS project [`jshttp/mime-db`](https://github.com/jshttp/mime-db) from 4 sources:
 - [IANA](http://www.iana.org/assignments/media-types/media-types.xhtml) (http://www.iana.org/assignments/media-types/media-types.xhtml)
 - [APACHE](http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types) (http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types)
 - [NGINX](http://hg.nginx.org/nginx/raw-file/default/conf/mime.types) (http://hg.nginx.org/nginx/raw-file/default/conf/mime.types)
