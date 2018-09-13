@@ -1,7 +1,7 @@
 {
 	"name": "mvccore/ext-tool-mimetype-extension",
 	"type": "library",
-	"description": "MvcCore extension to get file mimetype(s) strings array from file extension string or to get file extension(s) strings array from file mimetype string.",
+	"description": "MvcCore - Extension - Tool - MimeType & Extensions - extension to get file mimetype(s) strings array from file extension string or to get file extension(s) strings array from file mimetype string.",
 	"keywords": [
 		"mvc", 
 		"mvccore", 
