@@ -20,7 +20,7 @@ call npm run build
 @timeout 1
 
 @cd scripts
-php %currentDir%/build
+php %currentDir%/build.phpt
 
 @echo.
 @echo Building finished.

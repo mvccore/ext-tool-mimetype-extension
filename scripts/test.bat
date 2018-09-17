@@ -1,5 +1,5 @@
 @set currentDir=%cd%
 
-php %currentDir%/test
+php %currentDir%/test.phpt
 
 @pause

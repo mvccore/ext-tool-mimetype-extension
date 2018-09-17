@@ -17,7 +17,7 @@ npm run build
 sleep 1
 
 cd scripts
-php build
+php build.phpt
 
 echo "\n"
 echo Building finished.

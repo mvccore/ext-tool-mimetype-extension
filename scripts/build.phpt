@@ -1,3 +1,4 @@
+#!/bin/env php
 <?php
 
 	$debug = php_sapi_name() !== 'cli';
