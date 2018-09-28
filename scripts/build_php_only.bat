@@ -1,7 +1,7 @@
 @setlocal EnableDelayedExpansion
 @set currentDir=%cd%
 
-php %currentDir%/build
+php %currentDir%/build.phpt
 
 @echo.
 @echo Building finished.

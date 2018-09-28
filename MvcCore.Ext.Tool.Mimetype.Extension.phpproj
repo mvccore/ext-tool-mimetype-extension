@@ -20,15 +20,17 @@
     <Content Include=".hgignore" />
     <Content Include="composer.dev.json" />
     <Content Include="composer.json" />
+    <Content Include="custom-mimes.json" />
     <Content Include="LICENCE.md" />
+    <Content Include="package-lock.json" />
     <Content Include="README.md" />
-    <Content Include="scripts\build" />
     <Content Include="scripts\build.bat" />
+    <Content Include="scripts\build.phpt" />
     <Content Include="scripts\build.sh" />
     <Content Include="scripts\build_php_only.bat" />
     <Content Include="scripts\build_php_only.sh" />
-    <Content Include="scripts\test" />
     <Content Include="scripts\test.bat" />
+    <Content Include="scripts\test.phpt" />
     <Content Include="scripts\test.sh" />
   </ItemGroup>
   <ItemGroup>
@@ -36,10 +38,9 @@
     <Folder Include="src\" />
     <Folder Include="src\MvcCore\" />
     <Folder Include="src\MvcCore\Ext\" />
-    <Folder Include="src\MvcCore\Ext\Forms\" />
-    <Folder Include="src\MvcCore\Ext\Forms\Validators\" />
+    <Folder Include="src\MvcCore\Ext\Tools\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\MvcCore\Ext\Forms\Validators\FilesMimesAndExts.php" />
+    <Compile Include="src\MvcCore\Ext\Tools\MimeTypesExtensions.php" />
   </ItemGroup>
 </Project>

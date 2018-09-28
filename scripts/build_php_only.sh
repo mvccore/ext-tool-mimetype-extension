@@ -1,4 +1,4 @@
-php build
+php build.phpt
 
 echo "\n"
 echo Building finished.
