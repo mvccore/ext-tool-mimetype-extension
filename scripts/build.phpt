@@ -165,7 +165,7 @@ CODE;
 	 * `self::$mimesExts` array under returned mimetypes.
 	 * If there is no data for given extension, return `NULL`.
 	 * @param string $extension
-	 * @return string|NULL
+	 * @return \string[]|NULL
 	 */
 	public static function GetMimeTypesByExtension ($extension) {
 		$extensionStr = (string) $extension;

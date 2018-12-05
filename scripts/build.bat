@@ -10,7 +10,7 @@ git clone https://github.com/jshttp/mime-db.git
 call npm install --dev
 @timeout 1
 
-call npm install -g gnode
+call npm install gnode
 @timeout 1
 
 call npm run fetch
@@ -19,7 +19,7 @@ call npm run fetch
 call npm run build
 @timeout 1
 
-@cd scripts
+@cd ../scripts
 php %currentDir%/build.phpt
 
 @echo.
