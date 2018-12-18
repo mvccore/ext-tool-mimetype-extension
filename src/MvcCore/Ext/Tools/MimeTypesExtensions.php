@@ -19,6 +19,13 @@ namespace MvcCore\Ext\Tools;
 class MimeTypesExtensions
 {
 	/**
+	 * MvcCore - version:
+	 * Comparison by PHP function `version_compare();`.
+	 * @see http://php.net/manual/en/function.version-compare.php
+	 */
+	const VERSION = '5.0.0-alpha';
+
+	/**
 	 * Array with mime types and their extensions.
 	 * Key is mimetype string and value is
 	 * array with string extensions.
