@@ -8,11 +8,12 @@ MvcCore extension to get:
 - Mimetype(s) strings array from file extension string
 - Extension(s) strings array from file mimetype string
 
-This extension doesn't use PHP `mime_content_type()` function to recognize files by magic bytes sequence.
-It does form `input:file` validator itself - using PHP `fionfo` extension. This extension has only list of mimetypes
-and extensions to properly serve, which file extension(s) could have uploaded file with discovered mimetype by `finfo` 
-extension and to properly serve, which file mimetype(s) could have defined accepting file extension in `<input type="file" accept=".ext" />` 
-accept attribute.
+This extension doesn't use PHP `mime_content_type()` function.  
+To recognize which mimetype has uploaded file by magic bytes does 
+form control (`input:file`) validator itself using PHP `fionfo` extension.  
+This extension has only list of mimetypes and extensions to properly 
+decide, which file extension could be finally stored on server HDD 
+after magic bytes recognition.
 
 ## Mimetypes And Extensions Sources
 
