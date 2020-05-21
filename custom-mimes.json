@@ -480,6 +480,9 @@
         "imap"
     ],
     "application/x-httpd-php": [
+		"pht",
+		"phpt",
+		"phar",
         "php2",
         "php3",
         "php4",
@@ -777,6 +780,10 @@
     "application/xml": [
         "xml"
     ],
+	"application/xhtml+xml":  [
+		"vml", 
+		"pgml"
+	],
     "application/zip": [
         "zip"
     ],
@@ -1171,6 +1178,7 @@
     "text/plain": [
         "c",
         "c++",
+        "cpp",
         "cc",
         "com",
         "conf",
