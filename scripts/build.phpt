@@ -163,18 +163,41 @@ CODE;
 	 * If mimetype has defined file type with no extension, return
 	 * array with one record - the empty string. If there is 
 	 * no data for given mimetype, return `NULL`.
-	 * @param string $mimeType
+	 * @param string $mimeType Mime type in format like: 
+	 *						   `image/jpeg` | `image/*`
 	 * @return \string[]|NULL
 	 */
 	public static function GetExtensionsByMimeType ($mimeType) {
+		$result = NULL;
 		$mimeTypeStr = (string) $mimeType;
-		if (isset(static::$mimesExts[$mimeTypeStr])) {
-			return static::$mimesExts[$mimeTypeStr];
-		} else if (isset(static::$noExts[$mimeTypeStr])) {
-			return [''];
+		$starPos = mb_strpos($mimeTypeStr, '*');
+		if ($starPos !== FALSE) {
+			$mimeTypeFirstChar = mb_substr($mimeTypeStr, 0, 1);
+			$mimeTypeBeforeStar = mb_substr($mimeTypeStr, 0, $starPos);
+			$mimeTypeSlashed = addcslashes(trim($mimeType), "-.+");
+			$mimeTypeRegExp = '#^' . str_replace('*', '(.*)', $mimeTypeSlashed) . '$#';
+			$result = [];
+			foreach (static::$mimesExts as $mimeTypeStr => $extensions) {
+				if (
+					mb_substr($mimeTypeStr, 0, 1) !== $mimeTypeFirstChar ||
+					mb_strpos($mimeTypeStr, $mimeTypeBeforeStar) !== 0 ||
+					!preg_match($mimeTypeRegExp, $mimeTypeStr)
+				) continue;
+				$result = array_merge($result, $extensions);
+			}
+			if (count($result) === 0) {
+				$result = NULL;
+			} else {
+				$result = array_unique($result);
+			}
 		} else {
-			return NULL;
+			if (isset(static::$mimesExts[$mimeTypeStr])) {
+				$result = static::$mimesExts[$mimeTypeStr];
+			} else if (isset(static::$noExts[$mimeTypeStr])) {
+				$result = [''];
+			}
 		}
+		return $result;
 	}
 	
 	/**
@@ -182,7 +205,8 @@ CODE;
 	 * Returned mime types are sorted by extensions count in
 	 * `self::$mimesExts` array under returned mimetypes.
 	 * If there is no data for given extension, return `NULL`.
-	 * @param string $extension
+	 * @param string $extension Extension in lower case 
+	 *							without dot, like `png` | `jpg`.
 	 * @return \string[]|NULL
 	 */
 	public static function GetMimeTypesByExtension ($extension) {
