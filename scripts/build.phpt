@@ -111,14 +111,14 @@ namespace MvcCore\Ext\Tools;
  *
  *
  */
-class MimeTypesExtensions
-{
+class MimeTypesExtensions {
+
 	/**
 	 * MvcCore - version:
 	 * Comparison by PHP function `version_compare();`.
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
-	const VERSION = '5.0.0-alpha';
+	const VERSION = '5.0.0';
 
 	/**
 	 * Array with mime types and their extensions.
