@@ -57,8 +57,8 @@ Temporary Items
 *.phpproj.user
 /tests/vendor
 /tests/composer.lock
-composer.dev.json
-composer.dev.lock
+composer.dev.*
+
 package-lock.json
 
 mime-db
